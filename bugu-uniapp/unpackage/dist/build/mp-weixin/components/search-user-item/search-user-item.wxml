@@ -1,0 +1,1 @@
+<view catchtap="{{f}}" class="search-user-content"><view class="user-avatar"><image mode="aspectFill" class="user-item-avatar" src="{{a}}"></image></view><text class="user-name">{{b}}</text><view class="search-user-statu-button-content" catchtap="{{e}}"><view style="{{'background-color:' + d}}" class="search-user-statu-button">{{c}}</view></view></view>

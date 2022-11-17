@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "hot-activity-item": "../../components/hot-activity-item/hot-activity-item",
+    "z-paging": "../../uni_modules/z-paging/components/z-paging/z-paging"
+  }
+}

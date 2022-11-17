@@ -1,0 +1,48 @@
+.header{
+    background-color: #fff;
+    padding: .4rem;
+    height: 2.8rem;
+    border-bottom:1px solid #ccc;
+}
+.header_logo{
+    color:#1e90ff;
+    font-size: 1.4rem;
+    text-align: left;
+    display: flex;
+}
+.header_left{
+    display: flex;
+}
+.header_infromation{
+    margin-left: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.header_txt{
+    font-size: 0.6rem;
+    color: #999;
+    display: inline-block;
+    padding-left: 0.3rem;
+}
+.header_bread{
+    display: inline-block;
+    margin-left: 20px;
+}
+.menu{
+    line-height: 2.8rem;
+}
+.dropdown{
+    float: right;
+}
+.drawer_content{
+    width: 100%;
+}
+.big_word{
+    font-style: italic;
+    font-weight: 600;
+}
+.small_word{
+    margin-left: 3px;
+    font-style: italic;
+    font-size: small;
+}

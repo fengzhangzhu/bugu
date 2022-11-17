@@ -1,0 +1,1 @@
+"use strict";var t=require("../../../../common/vendor.js");const e={name:"UniStatusBar",data:()=>({statusBarHeight:20}),mounted(){this.statusBarHeight=t.index.getSystemInfoSync().statusBarHeight+"px"}};var a=t._export_sfc(e,[["render",function(t,e,a,r,s,n){return{a:s.statusBarHeight}}],["__scopeId","data-v-46f56560"]]);wx.createComponent(a);

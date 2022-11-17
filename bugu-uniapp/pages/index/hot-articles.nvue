@@ -1,0 +1,214 @@
+<template>
+	<view>
+		<!-- <custom-tabs
+		:animation="true" 
+		:tabPadding="40"
+		:flex="true"
+		:activeColor="'#000'"
+			>
+			<custom-tab-pane label="动态"> -->
+				<z-paging ref="hotActivityPaging" 
+				:default-page-size="10" 
+				use-virtual-list 
+				:cell-height-mode="'dynamic'" 
+				@query="getHotArticles">
+					<template v-slot:cell="{item,index}">
+						<view class="item" >
+							<hot-activity-item 
+							:hotNumber='item.hot'
+							:hotText = "item.text"
+							:hotPic = "item.pic&&item.pic.length>0?item.pic[0]:''"
+							:isVideo ="item.video==1"
+							:key="'hot'+item.id" 
+							:ranking="index+1"
+							@onClick="onActivityItemClick(item)">
+							</hot-activity-item>
+						</view>
+					</template>
+				</z-paging>
+			<!-- </custom-tab-pane> -->
+			<!-- <custom-tab-pane label="问答"> -->
+				<!-- <z-paging 
+				ref="hotQuestionPaging" 
+				:default-page-size="10" 
+				use-virtual-list 
+				:cell-height-mode="'dynamic'" 
+				@query="getHotQuestions">
+					<template v-slot:cell="{item,index}">
+						<view class="item" >
+							<hot-activity-item
+							:hotNumber='item.hot'
+							:hotText = "item.title"
+							:hotPic = "item.video.length>0?item.video[0]:item.pics.length>0?item.pics[0]:''"
+							:isVideo ="item.video.length>0"
+							:key="'hot-question-'+item.id" 
+							:ranking="index+1"
+							@onClick="onQuestionItemClick(item.id)">
+							</hot-activity-item>
+						</view>
+					</template>
+				</z-paging> -->
+			<!-- </custom-tab-pane>
+			
+		</custom-tabs> -->
+	</view>
+</template>
+
+<script lang="ts">
+	import {
+		ArticleItem,
+		RingingToneItem,
+		QuestionDataItem,
+		PageInfo
+	} from '@/common/dataClass';
+	import {
+		REFRESH_DYNAMIC_SOUND
+	} from "@/common/storageKeys";
+	import {
+		REQUEST_SUCCEEDED_CODE,
+		reportObjectType,
+		RingingToneList
+	} from '@/common/constants';
+	import {
+		request
+	} from '@/utils/request';
+	/**
+	 * hotArticles 热门页面
+	 * @description: 热门页面
+	 * @Author: 穆兰
+	 * @Date: 2022/5/1
+	 * @LastEditors: 穆兰
+	 * @LastEditTime: 2022/5/1
+	 * @property {Number} scollerHeight - 页面高度
+	 * @property {Number} refresherEnabled - 是否允许页面刷新
+	 * @event {Function} onRefreshing - 页面刷新时
+	 */
+	export default {
+		emits:['onRefreshing'],
+		props:{
+			scollerHeight:{
+				type:Number,
+				require:true
+			},
+			refresherEnabled:{
+				type:Boolean,
+				require:true
+			}
+		},
+		data(){
+			return{
+
+			}
+		},
+		mounted() {
+			this.getHotArticles(1,10);
+			// this.getHotQuestions(1,10);
+		},
+		methods:{
+			
+			/**
+			 * @description 点击某个动态
+			 * @param {ArticleItem}
+			 */
+			onActivityItemClick(item){
+				uni.navigateTo({
+					url:`/pages/activity-info/activity-info?activityId=${item.id}`
+				})
+			},
+			/**
+			 * @description 点击单个问题跳转到问题详情页
+			 * @param {number} id 问题的id
+			 */
+			onQuestionItemClick(id:number){
+				uni.navigateTo({
+					url:`/pages/activity-info/question-info/question-info?questionId=${id}`
+				})
+			},
+			/**
+			 * 
+			 * @description 获取热门的动态列表
+			 * @param page 第几页 
+			 * @param notPlaySound 可选参数是否播放刷新音效
+			 */
+			async getHotArticles(page: number,pageSize:number, notPlaySound: boolean = false) {
+				request({
+					data: {
+						method: 'GET',
+						group: 'activity',
+						action: 'hot',
+						data: {
+							page
+						},
+						header: {
+							'content-type': 'application/x-www-form-urlencoded', // 默认值
+			
+						},
+					}
+				}).then((res)=>{
+					if (res.data.code === REQUEST_SUCCEEDED_CODE) {
+						let pageSum = res.data.data.pageSum
+						let articles = res.data.data.list as ArticleItem[]
+						this.$refs.hotActivityPaging.complete(articles);
+					}else{
+						this.$refs.hotActivityPaging.complete(false);
+					}
+				},()=>{
+					this.$refs.hotActivityPaging.complete(false);
+				});
+				
+			},
+			/**
+			 * 
+			 * @description 获取热门问题列表
+			 * @param page 第几页 
+			 * @param notPlaySound 可选参数是否播放刷新音效
+			 */
+			async getHotQuestions(page: number,pageSize:number, notPlaySound: boolean = false) {
+				request({
+					data: {
+						method: 'GET',
+						group: 'question',
+						action: 'hot',
+						data: {
+							page,
+						},
+						header: {
+							'content-type': 'application/x-www-form-urlencoded', // 默认值
+						},
+					}
+				}).then((res)=>{
+					if (res.data.code === REQUEST_SUCCEEDED_CODE) {
+						let pageInfo = res.data.data as PageInfo<QuestionDataItem>
+						let hotQuestions = pageInfo.list
+						this.$refs.hotQuestionPaging.complete(hotQuestions);
+					}else{
+						this.$refs.hotQuestionPaging.complete(false);
+					}
+				},()=>{
+					this.$refs.hotQuestionPaging.complete(false);
+				});
+				
+			},
+			/**
+			 * @description 播放刷新音效
+			 */
+			async playRefreshDynamicSound() {
+			      let refreshDynamicSound = uni.getStorageSync(REFRESH_DYNAMIC_SOUND) as RingingToneItem
+				  if(!refreshDynamicSound){
+					  refreshDynamicSound = RingingToneList[6]
+				  }
+			      const innerAudioContext =uni.createInnerAudioContext()
+			      innerAudioContext.autoplay = true
+			      innerAudioContext.src = refreshDynamicSound.url
+			    
+			  }
+		}
+	}
+</script>
+
+<style lang="scss">
+	.scrollview {
+		width: 100vw;
+		overflow-anchor: auto;
+	}
+</style>

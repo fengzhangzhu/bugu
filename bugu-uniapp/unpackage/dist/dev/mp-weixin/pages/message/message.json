@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "page-tabs": "../../components/page-tabs/page-tabs",
+    "interactive-message": "../../components/interactive-message/interactive-message",
+    "user-message-item": "../../components/user-message-item/user-message-item",
+    "activity-item": "../../components/activity-item/activity-item",
+    "uni-load-more": "../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "action-sheet-item": "../../components/action-sheet-item/action-sheet-item",
+    "action-sheet": "../../components/action-sheet/action-sheet"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "action-sheet-item": "../action-sheet-item/action-sheet-item",
+    "action-sheet": "../action-sheet/action-sheet"
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";var t=require("../../common/vendor.js");const e={name:"StatusBar",data:()=>({statusBarHeight:20}),mounted(){this.statusBarHeight=t.index.getSystemInfoSync().statusBarHeight+"px"}};var a=t._export_sfc(e,[["render",function(t,e,a,r,s,n){return{a:s.statusBarHeight}}],["__scopeId","data-v-002863e1"]]);wx.createComponent(a);

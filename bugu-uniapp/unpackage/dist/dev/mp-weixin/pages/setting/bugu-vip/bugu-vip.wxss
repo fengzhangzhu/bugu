@@ -1,0 +1,193 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.my-vip-info {
+  position: relative;
+  z-index: -1;
+  padding: 20rpx 30rpx;
+  margin: 0px 5%;
+  margin-top: 10%;
+  margin-bottom: 0;
+  background-color: #ffe9cc85;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.my-vip-info .username-and-vip-info {
+  margin-left: 20rpx;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.my-vip-info .username {
+  width: 100%;
+  text-align: left;
+  color: #633a05;
+  font-size: large;
+}
+.my-vip-info .vip-info {
+  width: 100%;
+  text-align: left;
+  color: #633a05;
+  font-size: small;
+}
+.header {
+  position: relative;
+  margin: 0 auto;
+  /*max-width: 990px;*/
+}
+.bg-w {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+.bg-w .bg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 600%;
+  height: 2000rpx;
+  border-radius: 50%;
+  border: 1rpx solid #deb887;
+  background-color: burlywood;
+  transform: translate(-50%, 0);
+}
+.header .cont {
+  position: relative;
+  z-index: 2;
+  padding: 20rpx 0;
+  text-align: center;
+  color: #fff;
+}
+.vip-type {
+  margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.vip-type-card {
+  width: 25%;
+  height: 300rpx;
+  margin: 0 4.15%;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+}
+.vip-type-card .vip-type-title {
+  margin: 30rpx 0px;
+  color: #633a05;
+  font-size: medium;
+}
+.vip-type-card .vip-type-price {
+  margin: 40rpx 0px;
+  font-size: larger;
+  font-weight: bold;
+  color: #633a05;
+}
+.vip-type-card .vip-type-tips {
+  margin: 30rpx 10rpx;
+  color: #949494;
+  font-size: 20rpx;
+}
+.vip-page-footer {
+  position: absolute;
+  bottom: 0;
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.vip-page-footer .vip-footer-botton {
+  text-align: center;
+  flex-grow: 1;
+  margin: 20rpx 10%;
+  padding: 20rpx;
+  background-color: burlywood;
+  border-radius: 20rpx;
+  color: #633a05;
+}
+.vip-interests {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.vip-interests .interests-item {
+  flex-grow: 1;
+}
+.vip-interests .interests-image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.vip-interests .interests-text {
+  font-size: small;
+  color: #633a05;
+}
+.vip-activities {
+  margin: 4.15%;
+}
+.vip-activities .vip-activity-content {
+  display: flex;
+  padding: 15rpx;
+  background-color: #ffe9cc;
+  border-radius: 20rpx;
+  align-items: center;
+  justify-content: center;
+}
+.vip-activities .vip-activity-text {
+  flex-grow: 1;
+}
+.vip-activities .vip-activity-text .vip-activity-title {
+  width: 100%;
+  text-align: left;
+  color: #633a05;
+  font-size: large;
+}
+.vip-activities .vip-activity-text .vip-activity-info {
+  width: 100%;
+  text-align: left;
+  color: #633a05;
+  font-size: medium;
+}
+.vip-activities .vip-activity-button-content {
+  width: 200rpx;
+  text-align: center;
+}
+.vip-activities .vip-activity-button-content .vip-activity-button {
+  text-align: center;
+  padding: 10rpx 20rpx;
+  background-image: linear-gradient(to right, #fed353, #febc2b);
+  border-radius: 20rpx;
+  color: #633a05;
+}

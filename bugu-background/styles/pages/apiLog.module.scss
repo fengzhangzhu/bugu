@@ -1,0 +1,45 @@
+
+.api_log_content{
+    min-height: 90vh;
+    background-color: white;
+    padding: 2%;
+}
+
+.card{
+    color:#fff;
+    font-size:small;
+    font-weight: bold;
+}
+.card_title{
+    color:#fff;
+    font-size:medium;
+    font-weight: bold;
+}
+.card_content{
+    align-items: center !important;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.icon_right {
+    display: inline-block;
+    border-top: 5px solid;
+    border-right: 5px solid;
+    width: 1em;
+    height: 1em;
+    border-color: #FFFFFF;
+    transform: rotate(45deg);
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.5s ease;
+}
+.log_list_content{
+    position: relative;
+    margin-top: 10px;
+}
+.pogination_top{
+width: 100%;
+text-align: end;
+}
+.log_list_item_content{
+
+}

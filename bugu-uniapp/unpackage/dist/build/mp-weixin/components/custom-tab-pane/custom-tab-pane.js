@@ -1,0 +1,1 @@
+"use strict";var e=require("../../common/vendor.js");const r={props:["label"],setup(r,t){e.index.$emit("getTabLabel",r.label)}};var t=e._export_sfc(r,[["render",function(e,r,t,a,n,o){return{}}],["__scopeId","data-v-492d91a3"]]);wx.createComponent(t);

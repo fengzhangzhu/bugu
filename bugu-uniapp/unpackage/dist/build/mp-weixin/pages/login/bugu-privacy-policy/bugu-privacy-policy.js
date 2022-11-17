@@ -1,0 +1,1 @@
+"use strict";var r=require("../../../common/constants.js");const c={data:()=>({PrivacyPolicyUrl:r.PrivacyPolicyUrl}),methods:{}};var e=require("../../../common/vendor.js")._export_sfc(c,[["render",function(r,c,e,o,a,t){return{a:a.PrivacyPolicyUrl}}]]);wx.createPage(e);

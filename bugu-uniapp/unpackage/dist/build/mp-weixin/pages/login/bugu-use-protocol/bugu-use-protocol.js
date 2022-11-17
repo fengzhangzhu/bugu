@@ -1,0 +1,1 @@
+"use strict";var r=require("../../../common/constants.js");const o={data:()=>({UseProtocolUrl:r.UseProtocolUrl}),methods:{}};var e=require("../../../common/vendor.js")._export_sfc(o,[["render",function(r,o,e,t,s,c){return{a:s.UseProtocolUrl}}]]);wx.createPage(e);

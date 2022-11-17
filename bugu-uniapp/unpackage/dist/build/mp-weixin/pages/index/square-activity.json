@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "activity-skeleton": "../../components/activity-skeleton/activity-skeleton",
+    "activity-item": "../../components/activity-item/activity-item",
+    "z-paging": "../../uni_modules/z-paging/components/z-paging/z-paging",
+    "action-sheet-item": "../../components/action-sheet-item/action-sheet-item",
+    "action-sheet": "../../components/action-sheet/action-sheet"
+  }
+}

@@ -1,0 +1,113 @@
+/* [z-paging]公用的静态css资源 */
+.zp-line-loading-image.data-v-9e33a538 {
+	margin-right: 8rpx;
+	width: 28rpx;
+	height: 28rpx;
+
+	animation: loading-flower-9e33a538 1s steps(12) infinite;
+
+	color: #666666;
+}
+.zp-loading-image-ios.data-v-9e33a538{
+	width: 20px;
+	height: 20px;
+}
+.zp-loading-image-android.data-v-9e33a538{
+	width: 32rpx;
+	height: 32rpx;
+}
+@keyframes loading-flower-9e33a538 {
+0% {
+		transform: rotate(0deg);
+}
+to {
+		transform: rotate(1turn);
+}
+}
+.zp-r-container.data-v-9e33a538 {
+
+		display: flex;
+		height: 100%;
+
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+}
+.zp-r-container-padding.data-v-9e33a538 {
+}
+.zp-r-left.data-v-9e33a538 {
+
+		display: flex;
+
+		flex-direction: row;
+		align-items: center;
+		overflow: hidden;
+}
+.zp-r-left-image.data-v-9e33a538 {
+
+		transform: rotate(180deg);
+		margin-top: 2rpx;
+}
+.zp-r-left-image-no-transform.data-v-9e33a538 {
+
+		margin-top: 2rpx;
+}
+.zp-r-left-image-pre-size.data-v-9e33a538{
+
+		width: 30rpx;
+		height: 30rpx;
+		overflow: hidden;
+}
+.zp-r-arrow-top.data-v-9e33a538 {
+
+		animation: refresher-arrow-top-9e33a538 .2s linear;
+		-webkit-animation: refresher-arrow-top-9e33a538 .2s linear;
+		animation-fill-mode: forwards;
+		-webkit-animation-fill-mode: forwards;
+}
+.zp-r-arrow-down.data-v-9e33a538 {
+
+		animation: refresher-arrow-down-9e33a538 .2s linear;
+		-webkit-animation: refresher-arrow-down-9e33a538 .2s linear;
+		animation-fill-mode: forwards;
+		-webkit-animation-fill-mode: forwards;
+}
+.zp-r-arrow-down-no-duration.data-v-9e33a538 {
+
+		animation: refresher-arrow-down-9e33a538 0s linear;
+		-webkit-animation: refresher-arrow-down-9e33a538 0s linear;
+		animation-fill-mode: forwards;
+		-webkit-animation-fill-mode: forwards;
+}
+.zp-r-right.data-v-9e33a538 {
+		font-size: 27rpx;
+
+		display: flex;
+
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+}
+.zp-r-right-text.data-v-9e33a538 {
+}
+.zp-r-right-time-text.data-v-9e33a538 {
+		margin-top: 10rpx;
+		font-size: 24rpx;
+}
+@keyframes refresher-arrow-top-9e33a538 {
+0% {
+			transform: rotate(180deg);
+}
+100% {
+			transform: rotate(0deg);
+}
+}
+@keyframes refresher-arrow-down-9e33a538 {
+0% {
+			transform: rotate(0deg);
+}
+100% {
+			transform: rotate(180deg);
+}
+}
+

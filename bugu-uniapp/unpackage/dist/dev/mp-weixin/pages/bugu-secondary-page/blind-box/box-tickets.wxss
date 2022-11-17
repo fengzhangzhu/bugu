@@ -1,0 +1,7 @@
+
+.box-tickets-content{
+    margin-top: 20px;
+}
+.takes-pagination{
+    margin-top: 10px;
+}

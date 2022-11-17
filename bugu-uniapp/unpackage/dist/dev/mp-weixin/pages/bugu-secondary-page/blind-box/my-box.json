@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-nav-bar": "../../../uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar",
+    "my-box-item": "../../../components/my-box-item/my-box-item",
+    "uni-pagination": "../../../uni_modules/uni-pagination/components/uni-pagination/uni-pagination",
+    "uni-transition": "../../../uni_modules/uni-transition/components/uni-transition/uni-transition",
+    "uni-list-item": "../../../uni_modules/uni-list/components/uni-list-item/uni-list-item",
+    "uni-list": "../../../uni_modules/uni-list/components/uni-list/uni-list",
+    "action-sheet": "../../../components/action-sheet/action-sheet"
+  }
+}

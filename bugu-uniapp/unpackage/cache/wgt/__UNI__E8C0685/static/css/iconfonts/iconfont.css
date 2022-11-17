@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2868667 */
+  src: url('/static/css/iconfonts/iconfont.woff2?t=1641884102173') format('woff2'),
+       url('/static/css/iconfonts/iconfont.woff?t=1641884102173') format('woff'),
+       url('/static/css/iconfonts/iconfont.ttf?t=1641884102173') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dianzan:before {
+  content: "\e8ad";
+}
+
+.icon-fenxiang:before {
+  content: "\e8b0";
+}
+
+.icon-dianzan1:before {
+  content: "\e8c4";
+}
+
+.icon-bg-close:before {
+  content: "\e63d";
+}
+
+.icon-search:before {
+  content: "\e8ef";
+}
+
+.icon-menpiao:before {
+  content: "\e8b8";
+}
+
+.icon-9:before {
+  content: "\e61d";
+}
+
+.icon-xingbie-unkown:before {
+  content: "\e727";
+}
+
+.icon-nanxing:before {
+  content: "\e60c";
+}
+
+.icon-nvxing:before {
+  content: "\e60d";
+}
+
+.icon-shimingrenzheng_shimingrenzheng:before {
+  content: "\e64b";
+}
+
+.icon-gengduo-c:before {
+  content: "\e612";
+}
+
+.icon-yuyin-l:before {
+  content: "\e6b9";
+}
+
+.icon-yuying-r:before {
+  content: "\e8ca";
+}
+
+.icon-quxiaoguanzhu:before {
+  content: "\e619";
+}
+
+.icon-alert:before {
+  content: "\e7c3";
+}
+
+.icon-delete:before {
+  content: "\e7c5";
+}
+
+.icon-guanzhu:before {
+  content: "\e67f";
+}
+
+.icon-securityscan:before {
+  content: "\e7c0";
+}
+
+.icon-bell:before {
+  content: "\e7c4";
+}
+
+.icon-sync:before {
+  content: "\e786";
+}
+
+.icon-xingqiu:before {
+  content: "\e618";
+}
+
+.icon-tupian:before {
+  content: "\e811";
+}
+
+.icon-yuyin:before {
+  content: "\e813";
+}
+
+.icon-dengdai:before {
+  content: "\e816";
+}
+
+.icon-xiangji:before {
+  content: "\e817";
+}
+
+.icon-qitake:before {
+  content: "\e81d";
+}
+
+.icon-chakantieziguanzhu:before {
+  content: "\e662";
+}
+
+.icon-Edit:before {
+  content: "\e60a";
+}
+
+.icon-microphone:before {
+  content: "\e7bf";
+}
+
+.icon-smile:before {
+  content: "\e766";
+}
+
+.icon-ellipsis:before {
+  content: "\e74f";
+}
+
+.icon-heart:before {
+  content: "\e7df";
+}
+
+.icon-fire:before {
+  content: "\e843";
+}
+
+.icon-heart-fill:before {
+  content: "\e849";
+}
+
+.icon-fire-fill:before {
+  content: "\e866";
+}
+
+.icon-huati:before {
+  content: "\e8b1";
+}
+
+.icon-pinglun:before {
+  content: "\e8b4";
+}
+
+.icon-remen:before {
+  content: "\e8c9";
+}
+
+.icon-message:before {
+  content: "\e78a";
+}
+
+.icon-edit-square:before {
+  content: "\e791";
+}
+

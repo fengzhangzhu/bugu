@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "question-item-skeleton": "../../components/question-item-skeleton/question-item-skeleton",
+    "question-item": "../../components/question-item/question-item",
+    "z-paging": "../../uni_modules/z-paging/components/z-paging/z-paging",
+    "action-sheet-item": "../../components/action-sheet-item/action-sheet-item",
+    "action-sheet": "../../components/action-sheet/action-sheet"
+  }
+}

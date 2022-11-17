@@ -1,0 +1,1 @@
+"use strict";var e=require("../../common/vendor.js");const n={name:"question-item",data:()=>({})};var t=e._export_sfc(n,[["render",function(n,t,o,r,i,c){return{a:e.o(((...e)=>n.onQuetionItemClick&&n.onQuetionItemClick(...e)))}}]]);wx.createComponent(t);

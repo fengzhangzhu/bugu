@@ -1,0 +1,101 @@
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+body{
+    background-color: #f6f6f6;
+    overflow:Scroll;
+    overflow-y:hidden;
+    overflow-x:hidden
+}
+.comm-left{
+    border-right:1px solid #eee;
+    position: relative;
+    min-height:92vh ;
+    height: auto;
+    background-color: #FFF;
+    padding:.3rem;
+    border-radius: .3rem;
+    border-bottom:1px solid #eee;
+  }
+.comm-right{
+    min-height: 92vh;
+    background-color: #f6f6f6;
+    padding-right:.3rem;
+    border-radius: .3rem;
+    border-bottom:1px solid #eee;
+  
+  }
+  .col-content{
+    display: block;
+    height: 92vh;
+    width: 100%;
+    overflow:auto; /*需要的时候会出现滚动条*/
+    overflow-x:hidden; /*控制X方向的滚动条*/
+    overflow-y:auto; /*控制Y方向的滚动条*/
+  }
+  .col-content-80vh{
+    display: block;
+    height: 85vh;
+    width: 100%;
+    overflow:auto; /*需要的时候会出现滚动条*/
+    overflow-x:hidden; /*控制X方向的滚动条*/
+    overflow-y:auto; /*控制Y方向的滚动条*/
+  }
+  .comm-main{
+    margin-top: .5rem;
+  }
+  html { overflow-x: hidden; overflow-y: auto; }
+  
+
+/* 底部备案号样式 */
+.py-4 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+.mt-auto {
+  margin-top: auto !important;
+}
+.container-fluid{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.d-flex {
+  display: flex !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.justify-content-between {
+  justify-content: space-between !important;
+}
+.small {
+  font-size: 80%;
+  font-weight: 400;
+}
+.text-muted {
+  color: #6c757d !important;
+}
+/* pagecontent */
+.container {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+// icon
+.icon-centent-large{
+  width: 40px;
+  height: 40px;
+}

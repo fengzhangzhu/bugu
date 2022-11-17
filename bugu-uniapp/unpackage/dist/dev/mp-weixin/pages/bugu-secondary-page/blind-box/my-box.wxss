@@ -1,0 +1,85 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.my-box-content {
+  padding: 2%;
+}
+.box-tags-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-tags-content .box-tag-take {
+  text-align: center;
+  flex-grow: 1;
+  margin-right: 10rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.box-tags-content .box-tag-put {
+  text-align: center;
+  flex-grow: 1;
+  margin-left: 10rpx;
+  padding: 20rpx;
+  color: #fff;
+  background-color: #ca9306;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.box-logs-content {
+  position: relative;
+}
+.box-logs-content .box-take-log {
+  width: 100%;
+  position: absolute;
+  background-color: #FFF;
+  min-height: 200rpx;
+  width: 100%;
+  padding: 10rpx 0rpx;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.box-logs-content .box-put-log {
+  width: 100%;
+  position: absolute;
+  background-color: #FFF;
+  min-height: 200rpx;
+  width: 100%;
+  padding: 10rpx 0rpx;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.box-edit-button {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 2%;
+  width: 90%;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  background-color: #ff7345;
+  border-radius: 50rpx;
+  color: #FFFFFF;
+  font-size: 35rpx;
+  font-weight: bold;
+  text-align: center;
+}

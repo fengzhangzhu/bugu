@@ -1,0 +1,92 @@
+/* [z-paging]公用的静态css资源 */
+.zp-line-loading-image.data-v-ef0d5cb6 {
+	margin-right: 8rpx;
+	width: 28rpx;
+	height: 28rpx;
+
+	animation: loading-flower-ef0d5cb6 1s steps(12) infinite;
+
+	color: #666666;
+}
+.zp-loading-image-ios.data-v-ef0d5cb6{
+	width: 20px;
+	height: 20px;
+}
+.zp-loading-image-android.data-v-ef0d5cb6{
+	width: 32rpx;
+	height: 32rpx;
+}
+@keyframes loading-flower-ef0d5cb6 {
+0% {
+		transform: rotate(0deg);
+}
+to {
+		transform: rotate(1turn);
+}
+}
+.zp-l-container.data-v-ef0d5cb6 {
+		height: 80rpx;
+		font-size: 27rpx;
+
+		clear: both;
+		display: flex;
+
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+}
+.zp-l-line-loading-custom-image.data-v-ef0d5cb6 {
+		color: #a4a4a4;
+		margin-right: 8rpx;
+		width: 28rpx;
+		height: 28rpx;
+}
+.zp-l-line-loading-custom-image-animated.data-v-ef0d5cb6{
+
+		animation: loading-circle-ef0d5cb6 1s linear infinite;
+}
+.zp-l-line-loading-view.data-v-ef0d5cb6 {
+		margin-right: 8rpx;
+		width: 23rpx;
+		height: 23rpx;
+		border: 3rpx solid #dddddd;
+		border-radius: 50%;
+
+		animation: loading-circle-ef0d5cb6 1s linear infinite;
+}
+.zp-l-line-loading-view-black.data-v-ef0d5cb6 {
+		border-color: #c8c8c8;
+		border-top-color: #444444;
+}
+.zp-l-line-loading-view-white.data-v-ef0d5cb6 {
+		border-color: #aaaaaa;
+		border-top-color: #ffffff;
+}
+.zp-l-text.data-v-ef0d5cb6 {
+}
+.zp-l-text-black.data-v-ef0d5cb6 {
+		color: #a4a4a4;
+}
+.zp-l-text-white.data-v-ef0d5cb6 {
+		color: #efefef;
+}
+.zp-l-line.data-v-ef0d5cb6 {
+		height: 1px;
+		width: 100rpx;
+		margin: 0rpx 10rpx;
+}
+.zp-l-line-black.data-v-ef0d5cb6 {
+		background-color: #eeeeee;
+}
+.zp-l-line-white.data-v-ef0d5cb6 {
+		background-color: #efefef;
+}
+@keyframes loading-circle-ef0d5cb6 {
+0% {
+			transform: rotate(0deg);
+}
+100% {
+			transform: rotate(360deg);
+}
+}
+

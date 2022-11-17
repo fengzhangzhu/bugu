@@ -1,0 +1,407 @@
+<template>
+	<view>
+		<z-paging 
+		ref="questionPaging" 
+		:default-page-size="10" 
+		use-virtual-list 
+		:cell-height-mode="'dynamic'" 
+		@query="getQuestions">
+			<!-- 搜索框 -->
+			<view class='search-bar-content' id='question-search-bar-content'>
+				<view class='search-bar'
+				@click="onSearchBarClick('question')"
+				>
+					<view class='iconfont icon-search' :style="{
+						  fontSize: '25px',
+						  color: '#707070'
+						}">
+					</view>
+					<view class='labels-swiper'>
+						<view class='search-tips'>
+							<text>有问题就会有答案</text>
+						</view>
+					</view >
+				</view>
+			</view>
+			<!-- 我的问题和回答入口 -->
+			<view class="my-qa-content">
+				<view @click="navigateTo('/pages/my-acticity/my-questions/my-questions')" class="my-qa">
+					<view class="my-qa-icon">
+						<view class="iconfont icon-wenhao"/>
+					</view>
+					<view class="my-qa-text">
+						<text>我的问题</text>
+					</view>
+				</view>
+				<view @click="navigateTo('/pages/my-acticity/my-answers/my-answers')" class="my-qa">
+					<view class="my-qa-icon">
+						<view class="iconfont icon-yongyan"/>	
+					</view>
+					<view class="my-qa-text">
+						<text>我的回答</text>
+					</view>
+				</view>
+				<view @click="navigateTo('/pages/my-acticity/my-collected-question/my-collected-question')" class="my-qa">
+					<view class="my-qa-icon">
+						<view class="iconfont icon-star"/>	
+					</view>
+					<view class="my-qa-text">
+						<text>我的关注</text>
+					</view>
+				</view>
+			</view>
+			<view v-if="isLoading">
+				<question-item-skeleton
+				:key="'skeleton'+index"
+				:needLabel="false"
+				v-for="(item,index) in [...new Array(5)]"
+				></question-item-skeleton>
+			</view>
+			<template v-slot:cell="{item,index}">
+				<view class="item" >
+					<question-item
+					:key="'question'+item.id"
+					:questionData="item"
+					:answerData="item.hotAnswer"
+					@click="onQuestionItemClick(item.id)"
+					@moreClick="onQuestionItemMoreClick(item)"
+					></question-item>
+				</view>
+			</template>
+		</z-paging>
+		<!-- </scroll-view> -->
+		<!-- 问题操作弹出层 -->
+		<action-sheet ref="questionActionPopup" :needHead="true" title="问题选择" :needCancelButton="true">
+			<block v-if="editQuestionItem.id">
+				<block v-if="editQuestionItem.publisher&&editQuestionItem.publisher.id == myId">
+					<action-sheet-item icon="icon-delete" title="删除" @click="onQuestionDeleteClick(editQuestionItem.id)"/>
+				</block>
+				<block v-else>
+					<action-sheet-item @click="onQuestionReportClick(editQuestionItem.id)" icon="icon-alert" title="举报" />
+					<action-sheet-item v-if="editQuestionItem.isLiked" 
+					icon="icon-quxiaoguanzhu" title="取消关注" @click="onCancelQuestionFollow(editQuestionItem.id)"/>
+					<action-sheet-item v-else icon="icon-guanzhu" title="关注问题" @click="onQuestionFollow(editQuestionItem.id)"/>
+				</block>
+			</block>
+		</action-sheet>
+	</view>
+</template>
+
+<script lang="ts">
+	import {
+		REQUEST_SUCCEEDED_CODE,
+		reportObjectType,
+		RingingToneList
+	} from '@/common/constants';
+	import {
+		deleteQuestion,
+		likeQuestion,
+		cancelLikeQuestion,	
+	} from "@/services/questionServices";
+	
+	import {
+		REFRESH_DYNAMIC_SOUND
+	} from "@/common/storageKeys";
+	import {
+		request
+	} from '@/utils/request';
+	import {
+		QuestionDataItem,
+		PageInfo
+	} from '@/common/dataClass'
+	/**
+	 * questions 知道页面
+	 * @description: 知道页面
+	 * @Author: 穆兰
+	 * @Date: 2022/5/1
+	 * @LastEditors: 穆兰
+	 * @LastEditTime: 2022/5/1
+	 * @property {Number} scollerHeight - 页面高度
+	 * @property {Number} refresherEnabled - 是否允许页面刷新
+	 * @event {Function} onRefreshing - 页面刷新时
+	 */
+	export default {
+		emits:['onRefreshing'],
+		props:{
+			scollerHeight:{
+				type:Number,
+				require:true
+			},
+			refresherEnabled:{
+				type:Boolean,
+				require:true
+			},
+			myId:{
+				type:Number,
+				require:true
+			}
+		},
+		data(){
+			return {
+				isLoading:false,
+				data: [] as QuestionDataItem[],
+				editQuestionItem:{} as QuestionDataItem,
+			}
+		},
+		async created() {
+			this.isLoading = true
+		},
+		methods:{
+			/**
+			 * @description 跳转到指定页面
+			 * @param {string} url 页面路径
+			 */
+			navigateTo(url:string){
+				uni.navigateTo({
+					url
+				})
+			},
+			/**
+			 * @description 点击搜索框
+			 * @param {string} type
+			 */
+			onSearchBarClick(type:string = 'index'){
+				uni.navigateTo({
+					url:"/pages/label-activity/search-question/search-question"
+				})
+			},
+			/**
+			 * @description 点击单个问题跳转到问题详情页
+			 * @param {number} id 问题的id
+			 */
+			onQuestionItemClick(id:number){
+				uni.navigateTo({
+					url:`/pages/activity-info/question-info/question-info?questionId=${id}`
+				})
+			},
+
+			/**
+			 * @description 点击问题上的更多按钮
+			 * @param {QuestionDataItem} item
+			 */
+			onQuestionItemMoreClick(item){
+				this.editQuestionItem=item
+				this.$refs.questionActionPopup.open()
+			},
+			
+			/**
+			 * @description 关注问题
+			 * @param {number} id 问题的id
+			 */
+			async onQuestionFollow(id){
+				if (await likeQuestion(id)) {
+					let questions = this.data
+					for (let i = 0; i < questions.length; i++) {
+						if (questions[i].issue.id == id) {
+							questions[i].isLike = 1
+							questions[i].issue.likeSum = questions[i].issue.likeSum+1
+							break
+						}
+					}
+					this.data = questions
+					this.$refs.questionActionPopup.close()
+					uni.showToast({
+						title: '关注成功',
+						icon: 'success'
+					})
+				}else{
+					uni.showToast({
+						title: '关注失败',
+						icon: 'error'
+					})
+				}
+			},
+			/**
+			 * @description 取消关注问题
+			 * @param {number} id 问题的id
+			 */
+			async onCancelQuestionFollow(id){
+				if (await cancelLikeQuestion(id)) {
+					let questions = this.data
+					for (let i = 0; i < questions.length; i++) {
+						if (questions[i].issue.id == id) {
+							questions[i].isLike = 0
+							questions[i].issue.likeSum = questions[i].issue.likeSum-1
+							break
+						}
+					}
+					this.data = questions
+					this.$refs.questionActionPopup.close()
+					uni.showToast({
+						title: '取消成功',
+						icon: 'success'
+					})
+				}else{
+					uni.showToast({
+						title: '取消失败',
+						icon: 'error'
+					})
+				}
+			},
+			/**
+			 * @description 举报问题
+			 * @param {number} id 问题的id
+			 */
+			onQuestionReportClick(id){
+				uni.navigateTo({
+					url:`/pages/setting/report-user/report-user?objectId=${id}&objectType=${reportObjectType.question}&modular=question`
+				})
+				this.$refs.questionActionPopup.close()
+			},
+			/**
+			 * @description 删除问题
+			 * @param {number} id
+			 */
+			onQuestionDeleteClick(id:number){
+				let _this = this
+				uni.showModal({
+					title:'删除问题',
+					content:'你确定要删除这个问题吗',
+					success: async function(res) {
+						if (res.confirm) {
+							if (await deleteQuestion(id)) {
+								let questions = _this.data
+								for (let i = 0; i < questions.length; i++) {
+									if (questions[i].id == id) {
+										questions.splice(i, 1)
+										break
+									}
+								}
+								_this.data = questions
+								_this.$refs.questionActionPopup.close()
+								uni.showToast({
+									title: '删除成功',
+									icon: 'success'
+								})
+							}else{
+								uni.showToast({
+									title: '删除失败',
+									icon: 'error'
+								})
+							}
+						}
+					}
+				})
+			},
+			/**
+			 * 
+			 * @description 获取问题列表
+			 * @param page 第几页 
+			 * @param notPlaySound 可选参数是否播放刷新音效
+			 */
+			getQuestions(page: number,pageSize: number) {
+				request({
+					data: {
+						method: 'GET',
+						group: 'question',
+						action: 'all',
+						data: {
+							page
+						},
+						header: {
+							'content-type': 'application/x-www-form-urlencoded', // 默认值
+						},
+					}
+				}).then((res)=>{
+					if (res.data.code === REQUEST_SUCCEEDED_CODE) {
+						let pageInfo = res.data.data as PageInfo<QuestionDataItem>
+						let questions = pageInfo.list
+						this.$refs.questionPaging.complete(questions);
+						this.isLoading =false
+					}else{
+						this.$refs.questionPaging.complete(false);
+						this.isLoading =false
+					}
+				},()=>{
+					this.$refs.questionPaging.complete(false);
+					this.isLoading =false
+				});
+			},
+			/**
+			 * @description 播放刷新音效
+			 */
+			async playRefreshDynamicSound() {
+			      let refreshDynamicSound = uni.getStorageSync(REFRESH_DYNAMIC_SOUND) as RingingToneItem
+				  if(!refreshDynamicSound){
+					  refreshDynamicSound = RingingToneList[6]
+				  }
+			      const innerAudioContext =uni.createInnerAudioContext()
+			      innerAudioContext.autoplay = true
+			      innerAudioContext.src = refreshDynamicSound.url
+			    
+			  }
+		}
+		
+	}
+</script>
+
+<style lang="scss">
+	.scrollview {
+		width: 100vw;
+		overflow-anchor: auto;
+	}
+	.search-bar-content {
+		height: fit-content;
+		background-color: #fff;
+		padding: 10px;
+	}
+	.search-bar {
+		padding: 10rpx 20rpx;
+		border-radius: 30rpx;
+		background-color: #f7f3f3;
+		display: flex;
+		align-items: center;
+	
+		.search-tips {
+			margin-left: 10rpx;
+			color: #696969;
+		}
+		.labels-swiper {
+			height: 50rpx;
+			width: 80%;
+		}
+	}
+	.loading-content {
+		width: 100%;
+		height: 60px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+		font-size: small;
+		color: #aaaaaa;
+	}
+	
+	.my-qa-content{
+		background-color: #FFFFFF;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 10rpx;
+		.my-qa{
+			display: flex;
+			flex-grow: 1;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			margin: 0 1.5%;
+			padding: 15rpx;
+			background-image: linear-gradient(to right, #61c5ae, #C6F4E7);
+			border-radius: 10rpx;
+			color: #04543B;
+			font-size: 35rpx;
+			font-weight: 600;
+			.my-qa-icon{
+				font-size: smaller;
+				padding: 10rpx;
+				border-radius: 50%;
+				background-color: #E4FAF4;
+			}
+			.my-qa-text{
+				margin-left: 10rpx;
+			}
+		}
+	}
+</style>

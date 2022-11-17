@@ -1,0 +1,285 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.bar-title {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+.bugu-page-content {
+  margin: 20rpx 30rpx;
+}
+.bugu-banner-content {
+  box-shadow: 10rpx 10rpx 5rpx #d4d4d4;
+  height: 44vw;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.bugu-banner {
+  height: 100%;
+  width: 100%;
+  border-radius: 20rpx;
+}
+.bugu-banner-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 20rpx;
+}
+.interactive-cards {
+  width: 100%;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: flex-start;
+}
+.interactive-cards .left-cards {
+  flex: 1;
+  margin-right: 10rpx;
+}
+.interactive-cards .right-cards {
+  margin-left: 10rpx;
+  flex: 1;
+}
+.lucky-draw-0 {
+  box-shadow: 10rpx 10rpx 5rpx #d4d4d4;
+  margin-top: 20rpx;
+  height: 66vw;
+  border-radius: 20rpx;
+  background-image: linear-gradient(to bottom, #42e1e3, #40e399);
+  position: relative;
+  overflow: hidden;
+}
+.lucky-draw-0 .left-lucky-draw-title-content {
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #ffd5a9;
+  top: 20rpx;
+  right: 20rpx;
+  border-radius: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.lucky-draw-0 .left-lucky-draw-title-content .lucky-draw-title {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  left: 0rpx;
+  font-size: large;
+  font-weight: bold;
+  z-index: 100;
+  color: #868686;
+}
+.lucky-draw-0 .left-lucky-draw-title-content .lucky-draw-icon {
+  height: 90%;
+  width: 90%;
+  opacity: 0.5;
+}
+.lucky-draw-0 .right-lucky-draw-title-content {
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #ffd5a9;
+  top: 20rpx;
+  left: 20rpx;
+  border-radius: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.lucky-draw-0 .right-lucky-draw-title-content .lucky-draw-title {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  right: -15px;
+  font-size: large;
+  font-weight: bold;
+  z-index: 100;
+  color: #868686;
+}
+.lucky-draw-0 .right-lucky-draw-title-content .lucky-draw-icon {
+  height: 90%;
+  width: 90%;
+  opacity: 0.5;
+}
+.lucky-draw-0 .draw-icon-left {
+  position: absolute;
+  width: 45vw;
+  height: 45vw;
+  left: -40rpx;
+  bottom: -30rpx;
+  opacity: 0.7;
+  z-index: 5;
+  transform: rotateY(180deg);
+  /* 水平镜像翻转 */
+}
+.lucky-draw-0 .draw-icon-right {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  right: -90rpx;
+  bottom: -40rpx;
+  opacity: 0.7;
+  z-index: 5;
+}
+.lucky-draw-1 {
+  box-shadow: 10rpx 10rpx 5rpx #d4d4d4;
+  margin-top: 20rpx;
+  height: 44vw;
+  border-radius: 20rpx;
+  background-color: #f9e1c7;
+  position: relative;
+  overflow: hidden;
+}
+.lucky-draw-1 .draw-icon-left {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  left: -40rpx;
+  bottom: -20vw;
+  opacity: 0.7;
+  z-index: 5;
+  transform: rotateY(180deg);
+  /* 水平镜像翻转 */
+}
+.lucky-draw-1 .draw-icon-right {
+  position: absolute;
+  width: 45vw;
+  height: 45vw;
+  right: -40rpx;
+  z-index: 5;
+  bottom: -30vw;
+}
+.lucky-draw-1 .right-lucky-draw-title-content {
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #4eccb8;
+  top: 20rpx;
+  right: 20rpx;
+  border-radius: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.lucky-draw-1 .right-lucky-draw-title-content .lucky-draw-title {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  left: 0rpx;
+  font-size: large;
+  font-weight: bold;
+  z-index: 100;
+  color: #868686;
+}
+.lucky-draw-1 .right-lucky-draw-title-content .lucky-draw-icon {
+  height: 90%;
+  width: 90%;
+  opacity: 0.5;
+}
+.lucky-draw-2 {
+  box-shadow: 10rpx 10rpx 5rpx #d4d4d4;
+  margin-top: 20rpx;
+  height: 22vw;
+  border-radius: 20rpx;
+  background-color: #f9e1c7;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lucky-draw-2 .title-content {
+  width: 30vw;
+  text-align: left;
+  font-size: large;
+  font-weight: bold;
+  color: #868686;
+}
+.weather-card {
+  box-shadow: 10rpx 10rpx 5rpx #d4d4d4;
+  margin-top: 20rpx;
+  height: 22vw;
+  border-radius: 20rpx;
+  background-color: #f9e1c7;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather-card .city-info-content {
+  width: 80rpx;
+  align-items: center;
+  display: flex;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.weather-card .city-info-content .city-info {
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  color: #000000;
+  margin: 0 auto;
+  font-size: 34rpx;
+  letter-spacing: 10rpx;
+}
+.weather-card .weather-info {
+  padding-top: 2vw;
+  flex: 4;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 5rpx;
+  height: 20vw;
+}
+.weather-card .weather-info .weather-text {
+  flex-grow: 1;
+  display: block;
+  font-size: 20rpx;
+}
+.weather-card .weather-temperature {
+  width: 80rpx;
+  line-height: 1.5;
+  text-align: center;
+}
+.weather-card .weather-temperature .weather-icon {
+  width: 70rpx;
+  height: 70rpx;
+}
+.weather-card .weather-temperature .temperature-text {
+  text-align: center;
+  font-weight: bold;
+}
+.lucky-draw-0:hover {
+  box-shadow: none;
+}
+.lucky-draw-1:hover {
+  box-shadow: none;
+}
+.weather-card:hover {
+  box-shadow: none;
+}

@@ -1,0 +1,1 @@
+"use strict";function t(){return getApp()}var e={handleQuery:function(e){try{setTimeout((function(){t().globalData.zp_handleQueryCallback=e}),1)}catch(a){}},_handleQuery:function(e,a,n){const r=t().globalData.zp_handleQueryCallback;return r?r(e,a,n):[e,a,n]}};exports.interceptor=e;

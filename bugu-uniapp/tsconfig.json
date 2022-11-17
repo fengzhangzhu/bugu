@@ -1,0 +1,22 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+	"target": "es2016",
+	"model": "es2016",
+	// 这样就可以对 `this` 上的数据属性进行更严格的推断
+	// "strict": true,
+	"jsx": "preserve",
+	"moduleResolution": "node",
+	"suppressImplicitAnyIndexErrors": true,
+	"removeComments": false,
+	"preserveConstEnums": true,
+	"experimentalDecorators": true,
+	"noImplicitAny": false,
+	"allowSyntheticDefaultImports": true,
+	// "noUnusedLocals": true,
+	// "noUnusedParameters": true,
+	"strictNullChecks": true,
+	"allowJs": true,
+	"resolveJsonModule": true
+  }
+}

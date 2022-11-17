@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-nav-bar": "../../uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar",
+    "activity-item": "../../components/activity-item/activity-item",
+    "action-sheet-item": "../../components/action-sheet-item/action-sheet-item",
+    "action-sheet": "../../components/action-sheet/action-sheet"
+  }
+}

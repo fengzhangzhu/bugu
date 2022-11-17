@@ -1,0 +1,1 @@
+.sound-select-content{line-height:60rpx;height:-webkit-fit-content;height:fit-content}.sound-select-content .sound-select-item{display:flex;align-items:center;padding:20rpx}.sound-select-content .sound-select-item .sound-text{flex-grow:1;font-size:large}

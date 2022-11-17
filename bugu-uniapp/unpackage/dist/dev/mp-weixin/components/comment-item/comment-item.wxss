@@ -1,0 +1,139 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.comment-content {
+  width: 94%;
+  margin: 2rpx 0;
+  padding: 3% 3%;
+  background-color: #fff;
+}
+.comment-item-content {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: fit-content;
+  display: flex;
+}
+.comment-avatar .avatar {
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 30rpx;
+}
+.comment-info {
+  flex-grow: 1;
+  margin-left: 20rpx;
+}
+.comment-info .user-name-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comment-info .user-name-option .username {
+  margin-top: 10rpx;
+  flex-grow: 1;
+  font-size: small;
+  display: flex;
+  color: #393939;
+}
+.comment-info .comment-text {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #595959;
+}
+.comment-info .comment-footer {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20rpx;
+  margin-bottom: 10rpx;
+}
+.comment-info .comment-footer .creat_time {
+  flex-grow: 1;
+  color: #A0A0A0;
+  font-size: smaller;
+  letter-spacing: 1rpx;
+  font-size: smaller;
+}
+.comment-info .comment-footer .comment-operation-options-content {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.comment-info .comment-footer .comment-operation-options-content .comment-operation-options-item {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40rpx;
+  color: #989898;
+}
+.comment-info .comment-footer .comment-operation-options-content .comment-operation-options-item .iconfont {
+  font-size: 40rpx;
+}
+.comment-info .comment-footer .comment-operation-options-content .comment-operation-options-item .like-sum {
+  margin-left: 10rpx;
+}
+.reply-content {
+  background-color: #FFFFFF;
+  padding-left: 90rpx;
+}
+.reply-content .reply-count {
+  margin: 20rpx;
+  padding-top: 10rpx;
+  font-size: small;
+  font-weight: bold;
+  color: #696969;
+}
+.lead-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 10rpx;
+}
+.lead-label .label-text {
+  padding: 4rpx 8rpx;
+  font-size: 20rpx;
+  color: #ffffff;
+  border-radius: 10rpx;
+  height: -webkit-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  background-color: #4eccb8;
+}
+.view-all-button {
+  width: -webkit-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx 20rpx;
+  font-size: 25rpx;
+  background-color: #F5F5F5;
+  border-radius: 30rpx;
+}

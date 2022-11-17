@@ -1,0 +1,207 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.publish-updates-content {
+  background-color: #FFF;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.article-text-input {
+  min-height: 300rpx;
+  width: 96%;
+  padding: 2%;
+  line-height: 1.2;
+  text-align: start;
+  border: none;
+  border-top: 1rpx solid #d6d6d6;
+  border-radius: 0rpx;
+}
+.private-select-content {
+  line-height: 60rpx;
+  height: -webkit-fit-content;
+  height: fit-content;
+}
+.private-select-content .private-select-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+.private-select-content .private-select-item .private-text {
+  flex-grow: 1;
+  font-size: large;
+}
+.labels-content {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 60rpx;
+  width: 96vw;
+  margin: 0 2vw;
+}
+.publish-footer {
+  display: flex;
+  height: 60rpx;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.is-anonymity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a1a1a1;
+  font-size: small;
+  text-align: center;
+}
+.is-anonymity .anonymity-text {
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin-left: 20rpx;
+}
+.is-anonymity .anonymity-switch {
+  transform: scale(0.6, 0.6);
+  margin-left: 0rpx;
+}
+.footer-add-label {
+  height: -webkit-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  display: flex;
+  font-weight: lighter;
+  font-size: 20rpx;
+  align-items: center;
+  justify-content: center;
+  padding: 8rpx 10rpx;
+  background-color: #eef3fc;
+  border-radius: 20rpx;
+}
+.footer-privacy-settings {
+  text-align: right;
+  flex: 1;
+  font-size: small;
+  color: #979797;
+}
+.choose-labels-content {
+  height: 50vh;
+}
+.activity-labels-content {
+  line-height: 60rpx;
+}
+.activity-label {
+  margin: 5rpx;
+  float: left;
+}
+.text-lenth-count {
+  width: 98%;
+  text-align: end;
+  font-size: small;
+  color: #a1a1a1;
+}
+.other-send-option {
+  width: 100%;
+  display: flex;
+  padding: 10rpx 20rpx;
+}
+.other-send-option .option-image-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+}
+.other-send-option .send-option-image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.other-send-option .text-lenth-count {
+  margin-left: 15%;
+  width: -webkit-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+.publish-button {
+  margin: 2%;
+  background-color: #27c9c1;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+.more-labels {
+  margin: 10rpx;
+  float: left;
+  width: -webkit-fit-content;
+  width: fit-content;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #929191;
+}
+.video_content {
+  height: -webkit-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.delete_video_icon {
+  z-index: 100;
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+.search-content {
+  display: flex;
+  align-items: center;
+}
+.search-content .search-input {
+  flex-grow: 1;
+  transition: all 300ms;
+}
+.search-content .search-button {
+  margin: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emoji-picker-content {
+  position: absolute;
+  bottom: 0;
+}
+.emoji-picker-content .emoji-picker-head {
+  padding: 20rpx;
+  display: flex;
+  background-color: #ebebeb;
+  align-items: center;
+}
+.emoji-picker-content .emoji-picker-head .emoji-picker-head-text {
+  flex-grow: 1;
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "usingComponents": {
+    "questions": "./questions",
+    "hot-articles": "./hot-articles",
+    "square-activity": "./square-activity",
+    "page-tabs": "../../components/page-tabs/page-tabs"
+  }
+}

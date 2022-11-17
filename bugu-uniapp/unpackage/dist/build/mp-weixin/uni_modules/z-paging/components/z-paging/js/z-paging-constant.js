@@ -1,0 +1,1 @@
+"use strict";var e={version:"2.3.3",delayTime:100,i18nUpdateKey:"z-paging-i18n-update",errorUpdateKey:"z-paging-error-emit",completeUpdateKey:"z-paging-complete-emit",listCellIndexKey:"zp_index",listCellIndexUniqueKey:"zp_unique_index"};exports.c=e;

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-nav-bar": "../../uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar",
+    "comment-item": "../../components/comment-item/comment-item",
+    "emoji": "../../components/emoji/emoji",
+    "uni-transition": "../../uni_modules/uni-transition/components/uni-transition/uni-transition",
+    "action-sheet-item": "../../components/action-sheet-item/action-sheet-item",
+    "action-sheet": "../../components/action-sheet/action-sheet"
+  }
+}

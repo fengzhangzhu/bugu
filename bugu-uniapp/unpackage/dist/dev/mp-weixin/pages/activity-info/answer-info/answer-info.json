@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-nav-bar": "../../../uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar",
+    "activity-skeleton": "../../../components/activity-skeleton/activity-skeleton",
+    "uni-icons": "../../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "comment-item": "../../../components/comment-item/comment-item",
+    "uni-load-more": "../../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "emoji": "../../../components/emoji/emoji",
+    "uni-transition": "../../../uni_modules/uni-transition/components/uni-transition/uni-transition",
+    "action-sheet-item": "../../../components/action-sheet-item/action-sheet-item",
+    "action-sheet": "../../../components/action-sheet/action-sheet"
+  }
+}

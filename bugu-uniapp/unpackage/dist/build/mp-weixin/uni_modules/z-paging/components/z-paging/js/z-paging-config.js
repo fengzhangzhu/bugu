@@ -1,0 +1,1 @@
+"use strict";var t=require("../../../../../common/vendor.js");let n=null,e=!1;var r={setConfig:function(n){try{t.index.setStorageSync("Z-PAGING-CONFIG-STORAGE-KEY",n)}catch(e){}},getConfig:function(){try{if(e)return n;n=t.index.getStorageSync("Z-PAGING-CONFIG-STORAGE-KEY"),e=!0}catch(r){return null}}};exports.zConfig=r;

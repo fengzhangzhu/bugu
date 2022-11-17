@@ -1,0 +1,1 @@
+<view class="data-v-7aa7f3e8"><scroll-view style="{{'height:' + b}}" scroll-y="true" class="scroller data-v-7aa7f3e8"><view class="emoji-content data-v-7aa7f3e8"><block wx:for="{{a}}" wx:for-item="item" wx:key="c"><view class="emoji-item data-v-7aa7f3e8"><text bindtap="{{item.b}}" class="emoj_box_img data-v-7aa7f3e8">{{item.a}}</text></view></block></view></scroll-view></view>

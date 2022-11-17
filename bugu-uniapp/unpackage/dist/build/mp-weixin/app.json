@@ -1,0 +1,99 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bugu/bugu",
+    "pages/message/message",
+    "pages/mine/mine",
+    "pages/publish/publish",
+    "pages/bugu-secondary-page/sign-in-lottery/sign-in-lottery",
+    "pages/login/login",
+    "pages/login/account-login",
+    "pages/label-activity/label-activity",
+    "pages/label-activity/search-activity",
+    "pages/user-home-page/user-home-page",
+    "pages/activity-info/activity-info",
+    "pages/activity-info/comment-info",
+    "pages/setting/setting",
+    "pages/setting/report-user/report-user",
+    "pages/setting/personal_information/personal_information",
+    "pages/setting/personal_information/change-username",
+    "pages/setting/bugu-vip/bugu-vip",
+    "pages/setting/real-name-authentication/real-name-authentication",
+    "pages/setting/school-login/school-login",
+    "pages/setting/sound-setting/sound-setting",
+    "pages/setting/help/help",
+    "pages/setting/about-bugu/about-bugu",
+    "pages/setting/about-bugu/update-log",
+    "pages/bugu-secondary-page/blind-box/blind-box",
+    "pages/bugu-secondary-page/blind-box/my-box",
+    "pages/bugu-secondary-page/blind-box/box-tickets",
+    "pages/message-secondary-page/chat-content/chat-content",
+    "pages/message-secondary-page/chat-history/chat-history",
+    "pages/message-secondary-page/official-news-info/official-news-info",
+    "pages/mine-secondary-page/fan-list/fan-list",
+    "pages/mine-secondary-page/follow-list/follow-list",
+    "pages/mine-secondary-page/visitor-list/visitor-list",
+    "pages/message-secondary-page/search-user/search-user",
+    "pages/login/bugu-privacy-policy/bugu-privacy-policy",
+    "pages/login/bugu-use-protocol/bugu-use-protocol",
+    "pages/message-secondary-page/interactive-message/interactive-message",
+    "pages/publish/ask-questions/ask-questions",
+    "pages/publish/sell-goods/sell-goods",
+    "pages/activity-info/question-info/question-info",
+    "pages/activity-info/goods-info/goods-info",
+    "pages/publish/write-answers/write-answers",
+    "pages/activity-info/answer-info/answer-info",
+    "pages/label-activity/search-question/search-question",
+    "pages/my-acticity/my-acticity",
+    "pages/my-acticity/my-questions/my-questions",
+    "pages/my-acticity/my-answers/my-answers",
+    "pages/my-acticity/my-collected-question/my-collected-question",
+    "pages/label-activity/label-question/label-question"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#a0a0a0",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/bugu/bugu",
+        "text": "布咕",
+        "iconPath": "/static/icons/bugu.png",
+        "selectedIconPath": "/static/icons/bugu-select.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "广场",
+        "iconPath": "/static/icons/index.png",
+        "selectedIconPath": "/static/icons/index-select.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "关注",
+        "iconPath": "/static/icons/message.png",
+        "selectedIconPath": "/static/icons/message-select.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/static/icons/mine.png",
+        "selectedIconPath": "/static/icons/mine-select.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取天气信息"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}
