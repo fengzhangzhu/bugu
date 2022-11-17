@@ -23,7 +23,7 @@
 
 -   部分页面
 
-    <img src="https://github.com/lonny0622/bugu/doc/img/Screenshot_20221117_145829.jpg" width="200"  alt="首页"/><br/>
+    <img src="https://github.com/lonny0622/bugu/tree/master/doc/img/Screenshot_20221117_145829.jpg" width="200"  alt="首页"/><br/>
 
     ![布咕](doc/img/Screenshot_20221117_145835.jpg)
 
